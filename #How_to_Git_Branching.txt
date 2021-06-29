@@ -1,0 +1,47 @@
+# Git Branching
+
+git clone https://github.com/emma-yemi/test_git_lab.git # this clone git "test_git_lab" repository to the current local git directory or the directory where the command is executed. 
+
+git status # verify the new repository cloned 
+
+OR 
+
+ls -lah # verify that the local git now has the new repository called test_git_lab.
+
+git branch test_lab #this create a new branch in a local repository 
+
+
+git checkout test_lab #this changed from the local master branch to "test_lab" branch.
+
+git branch #verify your current working branch 
+
+git log #to see all activity withing a git repository 
+
+git add * #this will add all files inside the currently working branch to staging area.
+
+OR 
+
+git add "file_mod1.txt" #this add the file specified to stagging area.
+
+git commit * 
+OR 
+git commit -m "save changes made to 'file_mod1' "  #this command will commit/save all files that are currently present in stagging area. 
+
+git diff master test_lab #this command check the difference between 2 branches "master branch" and "test_lab branch"
+
+#git branch merging: 
+NOTE: i was in test_lab branch but i want to add the newly added files on test branch to "master branch"
+
+step#1: chekout from "test_lab" branch to "master" branch. 
+git checkout master 
+
+step#2: merge the newly added/commited files in "test_lab" branch to "master" branch 
+i.e git merge <branch-name-where-the-files-recently-added> 
+git merge test_lab 
+
+step#3: commit / save the newly merge/updated files 
+git commit -m "new merge from 'test_lab' branch"
+
+step#4: verfy the diffrence between master and test_lab branch. 
+i.e git diff <branch-1-name branch-2-name>  
+git diff master test_lab
